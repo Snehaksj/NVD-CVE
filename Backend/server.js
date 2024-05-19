@@ -1,0 +1,20 @@
+import express from "express";
+import mongoose from "mongoose";
+import "dotenv/config.js";
+import cors from "cors";
+import populateRoute from "./routes/populate.js";
+import filterRoute from "./routes/filter.js";
+import paginateRoute from "./routes/paginate.js";
+
+const app = express();
+mongoose.connect(process.env.URI);
+const db = mongoose.connection;
+db.on("error", (error) => console.log("Couldnt connect to database..."));
+db.once("open", () => console.log("Connected to database..."));
+const port = process.env.PORT;
+app.listen(port, () => console.log(`Server listening on port ${port}`));
+app.use(cors());
+app.use(express.json());
+app.use("/populate", populateRoute);
+app.use("/filter", filterRoute);
+app.use("/paginate", paginateRoute);

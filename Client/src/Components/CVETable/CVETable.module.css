@@ -1,0 +1,80 @@
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Segoe UI";
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table th,
+table td {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-family: "Segoe UI";
+}
+
+thead th {
+  background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+  background-color: #ddd;
+}
+
+.select {
+  margin-bottom: 10px;
+}
+
+.pagination {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.options {
+  display: flex;
+  justify-content: space-between;
+}
+.resultsPerPage {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+}
+.resultsPerPage p {
+  font-size: 0.9em;
+  margin-top: -0.1em;
+}
